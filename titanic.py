@@ -18,24 +18,29 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import confusion_matrix
 
-MAX_DEPTH = None
-MAX_FEATURES = "sqrt"
+
 
 
 # ENVIRONMENT CONFIGURATION ---------------------------
 
 parser = argparse.ArgumentParser(description="Paramètres du random forest")
 parser.add_argument(
-    "--n_trees", type=int, default=20, help="Nombre d'arbres"
+    "--n_trees", type=int, default=20, help="Nombre d'arbres",
+)
+parser.add_argument(
+    "--max_depth", type=int, default=None, help="max depth",
+)
+parser.add_argument(
+    "--max_features", type=str, default="sqrt", help="max features",
 )
 args = parser.parse_args()
 
-n_trees = args.n_trees
+
+print("n_trees:", args.n_trees, "\nmax_depth:", args.max_depth, "\nmax_features:", args.max_features)
 
 # API TOKEN
 load_dotenv()
-JETON_API = os.environ.get("JETON_API", "")
-
+JETON_API = os.environ["JETON_API"]
 if JETON_API.startswith("$"):
     print("API token has been configured properly")
 else:
@@ -116,6 +121,9 @@ preprocessor = ColumnTransformer(
 )
 
 # Pipeline
+n_trees = args.n_trees
+MAX_DEPTH = args.max_depth
+MAX_FEATURES = args.max_features
 pipe = Pipeline(
     [
         ("preprocessor", preprocessor),
