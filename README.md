@@ -8,3 +8,8 @@ ayant la structure suivante:
 jeton_api: ####
 data_path: ####
 ```
+-Exécuter le projet
+```
+    python titanic.py --n_trees=20
+```
+Il faut créer un fichier .env contenant les information sensibles: jeton d'api
