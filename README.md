@@ -8,3 +8,14 @@ ayant la structure suivante:
 jeton_api: ####
 data_path: ####
 ```
+Créer un fichier .env avec les informations sensibles
+
+# Utiliser le projet
+
+1/ Installer les dépendances
+```
+pip install -r requirements.txt
+```
+```
+python main.py
+```
