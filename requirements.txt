@@ -3,3 +3,4 @@ PyYAML
 scikit-learn
 python-dotenv
 loguru
+vulture

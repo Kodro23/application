@@ -25,7 +25,7 @@ args = parser.parse_args()
 
 n_trees = args.n_trees
 jeton_api = os.environ.get("JETON_API", "")
-data_path = os.environ.get("data_path", "data/raw/data.csv")
+data_path = os.environ.get("data_path", "https://minio.lab.sspcloud.fr/kodro/ensae-reproductibilite/data/raw/data.csv")
 data_train_path = os.environ.get("train_path", "data/derived/train.csv")
 data_test_path = os.environ.get("test_path", "data/derived/test.csv")
 MAX_DEPTH = None
