@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 pandas
 PyYAML
 scikit-learn
 python-dotenv
 loguru
 vulture
+=======
+python-dotenv
+pandas
+scikit-klearn
+seaborn
+matplotlib
+>>>>>>> c5f5977029485ac850fcb01bd3481dda85a3d6d8

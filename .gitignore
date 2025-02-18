@@ -1,5 +1,11 @@
 config.yaml
 __pycache__/
+<<<<<<< HEAD
 recording.log
 data/
 *.parquet
+=======
+.env
+test.csv
+train.csv
+>>>>>>> c5f5977029485ac850fcb01bd3481dda85a3d6d8
